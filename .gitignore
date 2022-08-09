@@ -1,23 +1,92 @@
-# Compiled class file
-*.class
+Objects are a base of all complex structures in JavaScript.
 
-# Log file
-*.log
 
-# BlueJ files
-*.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+let user = {
+name: "John",
+age: 30
+};
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+Object.keys(user) = ["name","age"]
+Object.values(user) = ["John", 30]
+Object.entries(user) = [["name", "age"] , ["John", "30"]]
+                                ^                ^
+        Remember, double brackets if you're iterating arrays.
+
+
+
+
+for (let value of Object.values(user)) {
+  alert(value); 
+  
+  
+  These are the ways you can transform objects in JavaScript:
+  
+  let prices = {
+    banana: 1,
+    pineapple: 3,
+    butter: 4,
+    salsa: 2,
+    };
+    
+    let doublePrices = Object.fromEntries(
+        Object.entries(prices).map(entry => [entry[0], entry[1] * 2])
+                                               ^           ^ 
+                                          notice how it's only entry[1] that gets multiplied     
+    );
+        alert(prices);
+
+                                                    
+                                                    
+                                               
+             
+        
+        
+alert(doubePrices.meat)
+
+alert(doublePrices.prices)
+
+
+let user = {
+  name: "John",
+  age: 30
+};
+
+// loop over values
+for (let value of Object.values(user)) {
+  alert(value); // John, then 30
+}
+I Thought that this was interesting, this is the exact same thing as the python for loop. 
+Python:
+for i in Values(user):
+  print(i) 
+  
+ Actually, i don't know the equivalent of alert(), I'll think about it for a min
+ 
+ Symbol() stores a primitive value: 
+ 
+ const karen = Symbol(6)
+ const buzz = Symbol(6)
+ 
+ Symbol(6) === Symbol(6)
+
+Returns false.
+
+Challenge: Make the code as short as possible:
+
+let user = {
+      name: "John",
+      age: 30
+};
+
+alert(count(user) );
+
+let x = 0
+for(let count of Object.entries(user)){
+x=+1 ;
+alert(x);
+};
+
+            user
+)
